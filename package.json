@@ -1,0 +1,36 @@
+{
+  "name": "sms-management-api",
+  "version": "1.0.0",
+  "description": "An SMS management API",
+  "main": "src/index.js",
+  "scripts": {
+    "start:dev": "DEBUG=log nodemon --exec babel-node src/index.js",
+    "start": "npm run build && node dist/index.js",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "test": "test",
+    "lint": "eslint src/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LehruAngela/SMS-Management-API.git"
+  },
+  "author": "Angela Lehru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LehruAngela/SMS-Management-API/issues"
+  },
+  "homepage": "https://github.com/LehruAngela/SMS-Management-API#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "babel-cli": "^6.26.0",
+    "eslint": "^6.1.0",
+    "mongoose": "^5.6.7",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.3"
+  }
+}

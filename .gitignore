@@ -1,0 +1,7 @@
+node_modules
+dist
+
+# Coverage directory used by nyc
+coverage
+.coveralls.yml
+.nyc_output
