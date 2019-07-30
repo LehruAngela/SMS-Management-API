@@ -13,8 +13,12 @@ const ContactSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  password: {
+    type: String,
+    required: true,
+  }
 });
 
-const Contact = mongoose.model('Sms', ContactSchema);
+const Contact = mongoose.model('Contact', ContactSchema);
 
 export default Contact;

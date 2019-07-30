@@ -22,7 +22,11 @@
   "homepage": "https://github.com/LehruAngela/SMS-Management-API#readme",
   "dependencies": {
     "@babel/preset-env": "^7.5.5",
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsend": "^1.1.0",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

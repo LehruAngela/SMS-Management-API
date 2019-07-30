@@ -3,7 +3,19 @@ import SMS from '../models/sms';
 
 export default class SMSController {
   async sendSMS(req, res) {
-    const { body: { card, employeeId } } = req;
+    const { params: { sender }, body: { receiver, message } } = req;
+    await SMS.create({
+      sender: sender,
+      receiver: receiver,
+      message: message,
+      status: 'sent',
+    });
+    return res.status(201).jsend.success({
+      sender: sender,
+      receiver: receiver,
+      message: message,
+      status: 'sent'
+    });
   }
 
   async getSMS(req, res) {
@@ -11,9 +23,7 @@ export default class SMSController {
     const sms = await SMS.findOne({ _id: smsId });
 
     // return success response
-    return res.status(status).jsend.success({
-      status,
-      success: true,
+    return res.status(200).jsend.success({
       sender: sms.sender,
       receiver: sms.receiver,
       message: sms.message,
