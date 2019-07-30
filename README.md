@@ -2,7 +2,7 @@
 
 #### Documentation
 Endpoint | Functionality | Sample Body | Sample Response
------------- | -------------
+------------ | ------------- | ------------- | -------------
 POST /signup | Endpoint to signup user | {
 	"name": "TestUser",
     "phoneNumber": "070000000",
