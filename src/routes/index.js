@@ -26,7 +26,7 @@ router.post('/:sender/sendSMS', auth.verifyToken, smsController.sendSMS);
 /**
  * Endpoint to get details of an SMS
  */
-router.get(':smsId/getSMS/', auth.verifyToken, smsController.getSMS);
+router.get('/:smsId/getSMS', auth.verifyToken, smsController.getSMS);
 
 /**
  * Endpoint to get details of a contact
