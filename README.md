@@ -1,7 +1,7 @@
-##SMS-Management-API
+## SMS-Management-API
 This is an API written in NodeJS, Express.js framework using MongoDB as the data store. The endpoints mentioned below allow a user to signup to create an account and login to send sms messages, get details of an sms including the status of an sms and delete contacts with all the messages they have ever sent. 
 
-###Set-up
+### Set-up
 To get the project up and running, clone the project;
 1. To install all the dependencies of the project, run the command below; 
 ```
@@ -28,7 +28,7 @@ npm run build
 | GET | /getContact | Endpoint to get details of a contact | 
 | DELETE | /:name/deleteContact | Endpoint to delete a contact and all messages sent by the contact |
 
-####/signup 
+#### /signup 
 ```
 {
 	"name": "TestUser",
@@ -37,7 +37,7 @@ npm run build
 }
 ```
 
-####/login
+#### /login
 ```
 { 
 	"phoneNumber": "0774120889",
@@ -45,7 +45,7 @@ npm run build
 }
 ```
 
-####/:sender/sendSMS
+#### /:sender/sendSMS
 ```
 {
     "receiver": "774120889",
