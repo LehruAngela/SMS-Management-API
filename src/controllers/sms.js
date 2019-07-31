@@ -4,12 +4,16 @@ import SMS from '../models/sms';
 export default class SMSController {
   async sendSMS(req, res) {
     const { params: { sender }, body: { receiver, message } } = req;
+
+    // create SMS record in collection
     await SMS.create({
       sender: sender,
       receiver: receiver,
       message: message,
       status: 'sent',
     });
+
+    // return success response
     return res.status(201).jsend.success({
       sender: sender,
       receiver: receiver,
