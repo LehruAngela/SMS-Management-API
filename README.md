@@ -31,7 +31,7 @@ npm run build
 ### /signup 
 ```
 {
-"name": "TestUser",
+    "name": "TestUser",
     "phoneNumber": "070.......",
     "password": "1...."
 }
@@ -40,7 +40,7 @@ npm run build
 ### /login
 ```
 { 
-"phoneNumber": "070.......",
+    "phoneNumber": "070.......",
     "password": "1...."
 }
 ```
