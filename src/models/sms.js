@@ -1,7 +1,5 @@
 import mongoose from 'mongoose';
 
-// const { ObjectId } = mongoose.Schema.Types;
-
 /**
  * Schema for the SMS collection
  */
