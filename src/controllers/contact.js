@@ -70,8 +70,8 @@ export default class ContactController {
     const contact = await Contact.findOne({ name: name })
 
     // remove Contact record from the collection
-    await Contact.remove({ _id: contact._id });
-    await SMS.remove({ sender: contact.phoneNumber })
+    await Contact.deleteOne({ _id: contact._id });
+    await SMS.deleteOne({ sender: contact.phoneNumber })
 
     // return success response
     return res.status(200).jsend.success({
